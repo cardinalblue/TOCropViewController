@@ -133,7 +133,7 @@
 /**
  The toolbar view managed by this view controller.
  */
-@property (nonnull, nonatomic, strong, readonly) TOCropToolbar *toolbar;
+@property (nonatomic, strong, readonly) UIView<Toolbar> *toolbar;
 
 /**
  The cropping style of this particular crop view controller

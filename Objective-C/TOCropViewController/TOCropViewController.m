@@ -39,7 +39,7 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
 @property (nonatomic, assign, readwrite) TOCropViewCroppingStyle croppingStyle;
 
 /* Views */
-@property (nonatomic, strong) TOCropToolbar *toolbar;
+@property (nonatomic, strong) UIView<Toolbar> *toolbar;
 @property (nonatomic, strong, readwrite) TOCropView *cropView;
 @property (nonatomic, strong) UIView *toolbarSnapshotView;
 @property (nonatomic, strong, readwrite) UILabel *titleLabel;
@@ -1041,7 +1041,7 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
     return _cropView;
 }
 
-- (TOCropToolbar *)toolbar {
+- (UIView<Toolbar> *)toolbar {
     if (!_toolbar) {
         _toolbar = [[TOCropToolbar alloc] initWithFrame:CGRectZero];
         [self.view addSubview:_toolbar];

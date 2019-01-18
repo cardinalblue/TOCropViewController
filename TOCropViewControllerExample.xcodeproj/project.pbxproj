@@ -203,6 +203,7 @@
 		A93782D3214A81A200CAE7EE /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/TOCropViewControllerLocalizable.strings; sourceTree = "<group>"; };
 		CDC8C5751C667B9100BB86A4 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
 		CDC8C5771C667B9100BB86A4 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/TOCropViewControllerLocalizable.strings; sourceTree = "<group>"; };
+		F4EB069321F1DE1900B758A7 /* Toolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Toolbar.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +261,7 @@
 				220C8EA521062FFF00A9B25D /* Constants */,
 				22DB4D881B234D07008B8466 /* Models */,
 				22DB4D8D1B234D07008B8466 /* Views */,
+				F4EB069221F1DE0400B758A7 /* Protocols */,
 				220C8EA021062E6D00A9B25D /* Resources */,
 				220C8EA421062FE500A9B25D /* Supporting */,
 			);
@@ -450,6 +452,14 @@
 				22DB4D951B234D07008B8466 /* TOCropView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F4EB069221F1DE0400B758A7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F4EB069321F1DE1900B758A7 /* Toolbar.h */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
