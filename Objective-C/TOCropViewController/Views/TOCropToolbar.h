@@ -79,6 +79,14 @@ NS_ASSUME_NONNULL_BEGIN
 /* Done button frame for popover controllers */
 @property (nonatomic, readonly) CGRect doneButtonFrame;
 
+/* Image generation */
++ (UIImage *)doneImage;
++ (UIImage *)cancelImage;
++ (UIImage *)rotateCCWImage;
++ (UIImage *)rotateCWImage;
++ (UIImage *)resetImage;
++ (UIImage *)clampImage;
+
 @end
 
 NS_ASSUME_NONNULL_END
