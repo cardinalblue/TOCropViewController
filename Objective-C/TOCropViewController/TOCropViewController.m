@@ -28,7 +28,6 @@
 #import "TOCroppedImageAttributes.h"
 
 static const CGFloat kTOCropViewControllerTitleTopPadding = 14.0f;
-static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
 
 @interface TOCropViewController () <UIActionSheetDelegate, UIViewControllerTransitioningDelegate, TOCropViewDelegate>
 
@@ -268,13 +267,13 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
     if (!verticalLayout) { // In landscape laying out toolbar to the left
         frame.origin.x = insets.left;
         frame.origin.y = 0.0f;
-        frame.size.width = kTOCropViewControllerToolbarHeight;
+        frame.size.width = self.toolbar.preferredToolbarHeight;
         frame.size.height = CGRectGetHeight(self.view.frame);
     }
     else {
         frame.origin.x = 0.0f;
         frame.size.width = CGRectGetWidth(self.view.bounds);
-        frame.size.height = kTOCropViewControllerToolbarHeight;
+        frame.size.height = self.toolbar.preferredToolbarHeight;
 
         if (self.toolbarPosition == TOCropViewControllerToolbarPositionBottom) {
             frame.origin.y = CGRectGetHeight(self.view.bounds) - (frame.size.height + insets.bottom);
@@ -306,7 +305,7 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
 
     // Horizontal layout (eg landscape)
     if (!verticalLayout) {
-        frame.origin.x = kTOCropViewControllerToolbarHeight + insets.left;
+        frame.origin.x = self.toolbar.preferredToolbarHeight + insets.left;
         frame.size.width = CGRectGetWidth(bounds) - frame.origin.x;
 		frame.size.height = CGRectGetHeight(bounds);
     }
@@ -316,9 +315,9 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
 
         // Set Y and adjust for height
         if (self.toolbarPosition == TOCropViewControllerToolbarPositionBottom) {
-            frame.size.height -= (insets.bottom + kTOCropViewControllerToolbarHeight);
+            frame.size.height -= (insets.bottom + self.toolbar.preferredToolbarHeight);
         } else if (self.toolbarPosition == TOCropViewControllerToolbarPositionTop) {
-			frame.origin.y = kTOCropViewControllerToolbarHeight + insets.top;
+			frame.origin.y = self.toolbar.preferredToolbarHeight + insets.top;
             frame.size.height -= frame.origin.y;
         }
     }

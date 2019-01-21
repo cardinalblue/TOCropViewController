@@ -323,6 +323,11 @@
     }
 }
 
+- (CGFloat)preferredToolbarHeight
+{
+    return 44.0;
+}
+
 - (CGRect)clampButtonFrame
 {
     return self.clampButton.frame;

@@ -29,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /* In horizontal mode, offsets all of the buttons vertically by height of status bar. */
 @property (nonatomic, assign) CGFloat statusBarHeightInset;
+@property (nonatomic, assign) CGFloat preferredToolbarHeight;
 
 /* Set an inset that will expand the background view beyond the bounds. */
 @property (nonatomic, assign) UIEdgeInsets backgroundViewOutsets;
